@@ -13,6 +13,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -43,7 +44,8 @@ public class SavedQuestions extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         db = new DatabaseHelper(this);
         dialog = new Dialog(SavedQuestions.this);
-        layout = new LinearLayout(this);
+        ContextThemeWrapper newContext = new ContextThemeWrapper(this, R.style.listPop);
+        layout = new LinearLayout(newContext);
         list = new ListView(this);
         vragen = db.getVragen();
 
@@ -67,16 +69,10 @@ public class SavedQuestions extends AppCompatActivity {
 
     public void setPopup(int pos){
         layout.removeAllViews();
-
-//        ArrayAdapter<Antwoord> arrayAdapter = new ArrayAdapter<Antwoord>
-//                (SavedQuestions.this, android.R.layout.simple_list_item_1, vragen.get(pos).getAntwoorden());
-//        list.setAdapter(arrayAdapter);
-//        layout.addView(list);
         antwoorden = vragen.get(pos).getAntwoorden();
-        layout.setOrientation(LinearLayout.VERTICAL);
-        layout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+        ContextThemeWrapper newContext = new ContextThemeWrapper(this, R.style.popup);
         for (int i=0; i<antwoorden.size(); i++){
-            TextView antwoord = new TextView(this);
+            TextView antwoord = new TextView(newContext);
             antwoord.setText(antwoorden.get(i).toString());
             antwoord.setTextSize(20);
             if (antwoorden.get(i).isCorrect()==1){
@@ -87,6 +83,7 @@ public class SavedQuestions extends AppCompatActivity {
             }
             layout.addView(antwoord);
         }
+
 
         dialog.setContentView(layout);
 
