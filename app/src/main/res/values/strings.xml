@@ -1,0 +1,56 @@
+<resources>
+    <!-- titles-->
+    <string name="app_name">Quiz</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_info">Info over Applicatie</string>
+    <string name="title_activity_splash">Quiz</string>
+    <string name="title_activity_rank_per_categorie">Rank</string>
+    <string name="title_activity_quiz_settings">Quiz Settings</string>
+    <string name="title_activity_question">Question</string>
+    <string name="title_activity_result">Result</string>
+    <string name="title_activity_add_question">Add Question</string>
+    <string name="title_activity_saved_questions">Opgeslagen vragen</string>
+
+    <!--    Buttons-->
+    <string name="InfoButton">Info</string>
+    <string name="QuizButton">Begin de quiz</string>
+    <string name="RankCatButton">Toon je beste resultaten</string>
+    <string name="startQuiz">Start de quiz!</string>
+    <string name="filterButton">Filter</string>
+    <string name="ResultButton">Save</string>
+    <string name="SavedButton">Toon de opgeslagen vragen</string>
+    <string name="AddButton">Voeg een vraag toe</string>
+
+    <!--Info-->
+    <string name="infoApp">Informatie over de app:</string>
+    <string name="infotekst">
+        In deze app kan je een quiz afnemen. Als je de quiz start kan je een categorie en het
+        aantal gewenste vragen kiezen. Nadat je alle vragen beantwoord hebt, geef je je naam in en als je poging in de 10
+        beste scores zit zal deze verschijnen in de ranking! Alle vragen komen uit de online "Trivia API". Zelf
+        kan je ook gekregen vragen opslagen en zelf toevoegen, deze zijn te zien in de opgeslagen vragen. Van deze vragen kan
+        je ook een quiz afleggen.
+    </string>
+    <string name="infoPersoon">Contactinfo:</string>
+    <string name="Naam">Maarten Schroons</string>
+    <string name="Telefoonnummer">0497275715</string>
+    <string name="Email">r0761727@student.thomasmore.be</string>
+
+    <!--    QuizSettings-->
+    <string name="CatInfo">Categorie:</string>
+    <string name="AmInfo">Aantal vragen:</string>
+    <string name="Difficulty">Moeilijkhijdsgraad:</string>
+
+    <!--    Ranking-->
+    <string name="topInfo">Jouw beste resultaten:</string>
+
+    <!--    Result-->
+    <string name="resultString">Gelieve uw naam in te vullen om je score op te slaan.</string>
+    <string name="save">Sla de vraag op</string>
+
+    <!--    addQuestion-->
+    <string name="vraagHint">Vraag</string>
+    <string name="correctHint">Correct antwoord</string>
+    <string name="incorrectHint">Incorrect antwoord 1</string>
+    <string name="incorrectHintA">Incorrect antwoord 2 (niet verplicht)</string>
+    <string name="incorrectHintB">Incorrect antwoord 3 (niet verplicht)</string>
+</resources>

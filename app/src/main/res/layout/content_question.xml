@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".QuestionActivity"
+    tools:showIn="@layout/activity_question">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/category"
+            style="@style/Question"/>
+        <TextView
+            android:id="@+id/difficulty"
+            android:layout_below="@id/category"
+            android:paddingBottom="400px"
+            style="@style/Question" />
+        <TextView
+            android:id="@+id/vraag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/difficulty"
+            android:textSize="70px"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"/>
+
+        <ListView
+            android:id="@+id/antwoordenView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vraag"
+            android:background="@color/colorAccent"/>
+        <Button
+            android:id="@+id/knop"
+            style="@style/bottomRight"
+            android:onClick="save"
+            android:text="@string/save" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ResultActivity"
+    tools:showIn="@layout/activity_result">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/resultaat"
+            style="@style/Result"
+            android:paddingTop="150dp"/>
+        <TextView
+            android:id="@+id/bericht"
+            style="@style/Result"
+            android:layout_below="@id/resultaat"
+            android:paddingBottom="100dp"/>
+        <TextView
+            android:id="@+id/tekst"
+            style="@style/Result"
+            android:text="@string/resultString"
+            android:layout_below="@id/bericht" />
+        <EditText
+            android:id="@+id/naam"
+            android:layout_below="@id/tekst"
+            style="@style/nameinput"/>
+        <Button
+            style="@style/bottomRight"
+            android:text="@string/ResultButton"
+            android:onClick="save"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
